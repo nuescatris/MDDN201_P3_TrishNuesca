@@ -1,154 +1,427 @@
 <!DOCTYPE HTML>
 
 <html>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Your Website</title>
+	<title>MDDN201_Project3</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--For heart, comment, search and save icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body>
-
-<p>Notice how this content isn't centered. To center it we need to wrap it</p>
-
-	<section>
-		<h1>Here is some centered content, by wrapping it with a section tag</h1>
-		<p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque est, egestas tristique quam nec, efficitur efficitur massa. Aenean in faucibus felis. Mauris ut ligula vestibulum, varius metus vitae, maximus orci. </em></p>
-
-		<p>Notice how if you change the width of your browser it stays in the center</p>
-	</section>
-
-	<section>
-		<p>This is a simple nav bar, which is full width of the page</p>
-	</section>
-	<nav>
-		<h3>A nice navigation bar</h3>
-		<a href="#one">Link 1</a>
-		<a href="#two">Link 2</a>
-		<a href="#three">Link 3</a>
+    
+    <!--Navigation Bar -->
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="page2.html">Profile</a>
+            <a href="page3.html">Webdrobe</a>
+            <a href="page4.html">Styleboard</a>
+            <i class="fa fa-search"></i>
+        </ul>
 	</nav>
+    <br><br>
+    
+    <!-- Image Slideshow -->
+    <div class="slideshow_container">
+        <div class="mySlides fade">
+            <img src="img/lb2.jpg" style="width:100%" height="740px" alt="Vintage photo created by freepik - www.freepik.com">
+            <!--Img Caption/Link -->
+            <a href="https://www.freepik.com/free-photo/young-woman-suit-standing-by-scooter_3654047.htm">Business photo created by -<br> Senivpetro on www.freepik.com</a>
+            <!--Follow Button-->
+            <input type="checkbox"/>
+            <!--Like Button-->
+            <div class="like_btn">
+                <i onclick="likeFunction(this)" class="fa fa-heart" style="font-size: 18px;  padding:10px 12px 8px;"></i>
+            </div>
+            <!--Comment Button-->
+            <div class="comment_btn">
+                <i onclick= "document.getElementById('commentModal').style.display='block'" class="fas fa-comment-dots" style="font-size: 19px;  padding:9px 12px 9px 12px;"></i>
+            </div>
+            <!--Save Button-->
+            <div class="save_btn">
+                <i onclick="saveFunction(this)" class="fa fa-bookmark" style="font-size: 18px;  padding:10px 14.5px 8px 14.5px;"></i>
+            </div>        
+        </div>
+        
+        
+        <div class="mySlides fade">
+            <img src="img/lb1.jpg" style="width:100%" height="740px" alt="Business photo created by senivpetro - www.freepik.com">
+            <!--Img Caption-->
+            <a href="https://www.freepik.com/free-photo/elegant-woman-costume-hat-with-handbag-room_3918446.htm#page=1&query=fashion&position=0 ">Vintage photo created by Freepik - <br> www.freepik.com</a>
+            <!--Follow Button-->
+            <input type="checkbox"/>
+            <!--Like Button-->
+            <div class="like_btn">
+                <i onclick="likeFunction(this)" class="fa fa-heart" style="font-size: 18px;  padding:10px 12px 8px;"></i>
+            </div>
+            <!--Comment Button-->
+            <div class="comment_btn">
+                <i onclick= "document.getElementById('commentModal').style.display='block'" class="fas fa-comment-dots" style="font-size: 19px;  padding:9px 12px 9px 12px;"></i>
+            </div>
+            <!--Save Button-->
+            <div class="save_btn">
+                <i onclick="saveFunction(this)" class="fa fa-bookmark" style="font-size: 18px;  padding:10px 14.5px 8px 14.5px;"></i>
+            </div>
+        </div>
+        
+        
+        <div class="mySlides fade">
+            <img src="img/lb3.jpg" style="width:100%" height="740px" alt="Photo created by freepik - www.freepik.com">
+            <!--Img Caption-->
+            <a href="https://www.freepik.com/free-photo/pretty-blonde-woman-park-wearing-summer-look_5495140.htm ">Photo created by Freepik -<br> www.freepik.com</a> 
+            <!--Follow Button-->
+            <input type="checkbox"/>
+            <!--Like Button-->
+            <div class="like_btn">
+                <i onclick="likeFunction(this)" class="fa fa-heart" style="font-size: 18px;  padding:10px 12px 8px;"></i>
+            </div>
+            <!--Comment Button-->
+            <div class="comment_btn">
+                <i onclick= "document.getElementById('commentModal').style.display='block'" class="fas fa-comment-dots" style="font-size: 19px;  padding:9px 12px 9px 12px;"></i>
+            </div>
+            <!--Save Button-->
+            <div class="save_btn">
+                <i onclick="saveFunction(this)" class="fa fa-bookmark" style="font-size: 18px;  padding:10px 14.5px 8px 14.5px;"></i>
+            </div>
+        </div>
+        
+        
+        <!-- The dots/circles or next/prev buttons -->
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+    
 
-	<section id="one">
-		<p><strong>Content number one</strong></p>
-		<p>By setting an a tag's href to "#one", it will link to a html element with the id of "one". <a href="https://css-tricks.com/hash-tag-links-padding/">More info about that here</a></p>
-	</section>
+    
+    
+    
+    <!-- Javascript Code for Slideshow -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-	<section id="two">
-		<p><strong>Content number 2</strong></p>
-	</section>
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1
+            } 
+            
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block"; 
+            dots[slideIndex-1].className += " active";  
+        }
+    </script>
+    
+    
+    
+    
 
-	<section id="three">
-		<p><strong>Content number 3</strong></p>
-	</section>
+    
+    <!-- Javascript code for Like and Save Button -->
+    <script>
+        function likeFunction(x) {
+            x.classList.toggle("gold-heart");
+        }
+        
+        function saveFunction(x) {
+            x.classList.toggle("gold-bookmark");
+        }
+    </script>
+    
+    
+    
+    
+    
+    <!--Modal Code for Comment Button Begins-->
+    <li style="list-style: none; display: inline">
+        <div class="modal" id="commentModal">
+            <span class="close" onclick="document.getElementById('commentModal').style.display='none'" title="Close Modal">&times;</span> 
+            
+            <!--Modal Content-->
+            <form class= "modal-content animate">
+                <!--Container for Comment-->
+                <div class="container">
+                    <label><b>COMMENT</b></label> 
+                    <input name="comment" placeholder="Add Comment" required="" type="text">
+                    <!--Cancel Button-->        
+                    <button class="cancel_btn" onclick= "document.getElementById('commentModal').style.display='none'" type="button">Cancel</button>
+                    <!--Post Button-->       
+                    <button class="post_btn" onclick= "document.getElementById('commentModal').style.display='none'" type="submit">Post</button>
+                </div>
+            </form>
+        </div>
+    </li> 
 
-	<header>
-		<section>
-			<h1>This header has a solid background and some padding</h1>
-			<p>There is also a section tag inside it to center this content</p>
-		</section>
-	</header>
-
-	
-
-	<section>
-		<h3>Grids</h3>
-
-		<p>Use grids to divide up or layout content. For example, putting an image on the left, and lots to text on the right</p>
-
-		<p>I've added a 'show' class so you can see where the grids are. Use chrome's web inspector tools to take a closer look</p>
-
-
-		<div class="g-row show"> <!--first wrap all grid cells in a g-row-->
-			<div class="g-50 show">
-				50% width .g-50
-			</div>
-			<div class="g-50 show">
-				50% width .g-50
-			</div>
-
-			<div class="g-30 show">
-				30% width .g-30
-			</div>
-
-			<div class="g-70 show">
-				70% width .g-70
-			</div>
-		</div>
-
-		<p>The other cool things about grids, is that 50% width means 50% of the div's <em>parent</em>. This means you can put cells in cells to get infinitly smaller sizes. The possiblities are endless!</p>
-
-		<div class="g-row show"> <!--first wrap all grid cells in a g-row-->
-			<div class="g-50 show">
-				<div class="g-50 show">
-					<div class="g-50 show">
-						50%
-					</div>
-					<div class="g-50 show">
-						50%
-					</div>
-				</div>
-				<div class="g-50 show">
-					50%
-				</div>
-			</div>
-			<div class="g-50 show">
-				50%
-			</div>
-		</div>
-
-		<p>Here's a simple page using all of these elements</p>
-	</section>
-
-	<header>
-		<section>
-			<h1>Infrastructure of Wellington</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</section>
-	</header>
-
-	<section>
-		<div class="g-row">
-			<div class="g-30">
-				<img src="img/cover.jpg">
-			</div>
-			<div class="g-70 padded">
-				<h3>Example</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque est, egestas tristique quam nec, efficitur efficitur massa. Aenean in faucibus felis. Mauris ut ligula vestibulum, varius metus vitae, maximus orci.</p>
-			</div>
-		</div>
-
-		<div class="g-row">
-			<div class="g-30">
-				<img src="img/cover.jpg">
-			</div>
-			<div class="g-70 padded">
-				<h3>Example</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque est, egestas tristique quam nec, efficitur efficitur massa. Aenean in faucibus felis. Mauris ut ligula vestibulum, varius metus vitae, maximus orci.</p>
-			</div>
-		</div>
-
-		<div class="g-row">
-			<div class="g-30">
-				<img src="img/cover.jpg">
-			</div>
-			<div class="g-70 padded">
-				<h3>Example</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque est, egestas tristique quam nec, efficitur efficitur massa. Aenean in faucibus felis. Mauris ut ligula vestibulum, varius metus vitae, maximus orci.</p>
-			</div>
-		</div>
-
-		<div class="g-row">
-			<div class="g-30">
-				<img src="img/cover.jpg">
-			</div>
-			<div class="g-70 padded">
-				<h3>Example</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque est, egestas tristique quam nec, efficitur efficitur massa. Aenean in faucibus felis. Mauris ut ligula vestibulum, varius metus vitae, maximus orci.</p>
-			</div>
-		</div>
-	</section>
-
+    <!--Javascript code for functional Modal on the Page-->
+    <script>
+        var modal = document.getElementById('commentModal');
+        
+        window.onclick = function(event) {
+            if (event.target == modal) { 
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    <!--Container 2/Second half of Page Begins --> 
+    <div class="container2">
+        <!--Left Column--> 
+        <div class="left_column">
+            <h1 style="text-shadow: -20.5px -13.5px 8px rgba(167, 31, 35, 0.5); color: #AE8A31;">Today's Look</h1>
+            
+            <!--Star Rating--> 
+            <fieldset class="rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
+                
+                <input type="radio" id="star4half" name="rating" value="4 and a half"/><label class="half" for="star4half"></label>
+                
+                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                
+                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"></label>
+                
+                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                
+                <input type="radio" id="star2half" name="rating" value="2 and a half"/><label class="half" for="star2half"></label>
+                
+                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                
+                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"></label>
+                
+                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                
+                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"></label>
+            </fieldset> 
+            
+            
+            <!--Img for Today's Look--> 
+            <img src="img/mirrorselfie.jpg" style="width:100%" height="500px" alt="Photo created from iStockphoto.com">
+             <!--Img Caption--> 
+            <p style="font-size:14px; color:#fff">Today's cute, comfy and casual look goes to Lauren! For more outfit inspo from this user, visit or follow her profile: 
+            <br>
+            <a href= "https://www.istockphoto.com/nz/photo/selfie-in-the-mirror-to-give-a-check-by-friends-the-process-of-fitting-the-dress-in-gm1146200358-308769724">@f4shi0nLau</a>
+            </p>
+        </div>
+       
+        
+        
+        
+        <!--Right Column Top--> 
+        <div class="right_column">
+            <div class="row">
+                <!-- 3 Column Layout for Images + Caption --> 
+                <div class="imgGrid">
+                    <div class="imgCaption">
+                        <img id="myImg" src="img/recom_prev.jpg" style="width:100%; height:250px" alt="My Recommended Looks">
+                        
+                        <!--Img Modal--> 
+                        <div id="myimgModal" class="imgmodal">
+                            <!-- The Close Button -->
+                            <span class="close">&times;</span>
+                            <!-- Modal Content (The Image) -->
+                            <img class="imgmodal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                        <!--Javascript Code for Modal--> 
+                        <script>
+                            // Get the Modal
+                            var modal = document.getElementById("myimgModal");
+                            
+                            // Get image and insert inside modal - use "alt" text as caption
+                            var img = document.getElementById("myImg");
+                            var modalImg = document.getElementById("img01");
+                            var captionText = document.getElementById("caption");
+                            img.onclick = function(){
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                            }
+                        
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close");
+                    
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                        </script>
+                        
+                        <!--Caption--> 
+                        <h1 style="font-size:18px; color: rgb(167, 31, 35); text-align: center;">Recommended</h1>
+                        <p style="font-size:14px; color:#fff">Check these outfits out! We've collected some looks we think you might love, based on the last fashion pieces you've liked, saved and rated!
+                        </p>
+                    </div>
+                </div>
+                
+            
+                
+                 <!-- 3 Column Layout for Images + Caption 2 --> 
+                <div class="imgGrid">
+                    <div class="imgCaption">
+                        <img id="myImg2" src="img/savedfits_prev.jpg" style="width:100%; height:250px" alt="My Saved Outfits">
+                        
+                        <!--Img Modal-->
+                        <div id="myimgModal2" class="imgmodal">
+                            <!-- The Close Button -->
+                            <span class="close">&times;</span>
+                            <!-- Modal Content (The Image) -->
+                            <img class="imgmodal-content" id="img02">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption2"></div>
+                        </div>
+                        
+                        <!--Javascript Code for Modal--> 
+                        <script>
+                            //Get the Modal
+                            var modal = document.getElementById("myimgModal");
+                            var modal = document.getElementById("myimgModal2");
+                            
+                            // Get image and insert inside modal - use "alt" text as caption
+                            var img = document.getElementById("myImg");
+                            var img = document.getElementById("myImg2");
+                            var modalImg = document.getElementById("img01");
+                            var modalImg = document.getElementById("img02");
+                            var captionText = document.getElementById("caption");
+                            var captionText = document.getElementById("caption2");
+                            img.onclick = function(){
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                            }
+                        
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close");
+                    
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                        </script>
+                        
+                        <!-- Text --> 
+                        <h1 style="font-size:18px; color: #AE8A31;">Saved Fits</h1>
+                        <p style="font-size:14px; color:#fff">See your saved looks here! We have collected ALL the fits' you've saved and organised it for you in this little folder!
+                        </p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <!-- 3 Column Layout for Images + Caption 3 --> 
+                <div class="imgGrid">
+                    <div class="imgCaption">
+                        <img id="myImg3" src="img/buywhere_prev.jpg" alt="Where to buy..." style="width:100%; height:250px">
+                        
+                        <!--Img Modal-->
+                        <div id="myimgModal3" class="imgmodal">
+                            <!-- The Close Button -->
+                            <span class="close">&times;</span>
+                            <!-- Modal Content (The Image) -->
+                            <img class="imgmodal-content" id="img03">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption3"></div>
+                        </div>
+                        
+                        <!--Javascript Code for Modal--> 
+                        <script>
+                            //Get the Modal
+                            var modal = document.getElementById("myimgModal");
+                            var modal = document.getElementById("myimgModal2");
+                            var modal = document.getElementById("myimgModal3");
+                            
+                            // Get image and insert inside modal - use "alt" text as caption
+                            var img = document.getElementById("myImg");
+                            var img = document.getElementById("myImg2");
+                            var img = document.getElementById("myImg3");
+                            var modalImg = document.getElementById("img01");
+                            var modalImg = document.getElementById("img02");
+                            var modalImg = document.getElementById("img03");
+                            var captionText = document.getElementById("caption");
+                            var captionText = document.getElementById("caption2");
+                            var captionText = document.getElementById("caption3");
+                            img.onclick = function(){
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                            }
+                        
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close");
+                    
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                        </script>
+                        
+                        
+                        
+                        
+                        <!-- Text --> 
+                        <h1 style="font-size:18px; color: rgb(167, 31, 35);">Buy From...</h1>
+                        <p style="font-size:14px; color:#fff">Have you always wanted to know where certain pieces are from? Well look no more! Click here to find out!!
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            
+    
+            <div class="fashNews">
+                <h1 style="font-size:35px; color: rgb(167, 31, 35);">Fashion News</h1>
+                <div class="left_columnVid">
+                    <p style="font-size:10px; color:#fff">Checkout more on <a href= "https://www.youtube.com/channel/UCj6iVt0NLGyj406r2kD161g">In Style's Channel</a>
+                    </p>
+                    <!-- Video --> 
+                    <iframe width="300" height="175" src="https://www.youtube.com/embed/wbOC2Y-2JPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="right_columnVid">
+                    <p style="font-size:10px; color:#fff;">Checkout more on <a href= "https://www.youtube.com/channel/UCepVy23t8l-CEaASZzfo9Jg">Fashion Channel</a>
+                    </p>
+                    <!-- Video -->     
+                    <iframe width="300" height="175" src="https://www.youtube.com/embed/igNk13OS4eQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>          
+    
+    <!--Footer--> 
+    <div id="footer">
+    </div>
+    
 </body>
-
 </html>
