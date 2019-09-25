@@ -33,7 +33,7 @@ nav ul{
 nav ul a{
     color:#e6e9e0;
 	line-height: 25px;
-	margin-left: -5px;
+	margin-left: 25px;
 	margin-right: 35px;
 	text-decoration: none;
     text-transform: uppercase;
@@ -48,7 +48,7 @@ nav i {
     cursor:pointer;
     background:transparent;
     display:inline-block;
-    margin:0 0 0 720px;
+    margin:0 0 0 840px;
     color:#fff;
     transition:.2s;
 }
@@ -393,20 +393,14 @@ input[type=text] {
 /*| CONTAINER2 |*/
 .container2 {
     width: 100%;
-    height: 790px;
-    background: linear-gradient(
-    to bottom,
-    #D3C8AF,
-    #D3C8AF 50%,
-    #ffffff 50%,
-    #ffffff
-    );
-    background-size: 100% 20px;
+    height: 820px;
+    background: #000;
+/*    background-size: 100% 20px;*/
     margin-left: auto;
     margin-right: auto;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 15px;
+    padding-top: 20px;
     
 }
 
@@ -433,10 +427,11 @@ input[type=text] {
 .left_column{
     background: black;
     width: 35%;
-    height: 98%;
+    height: 97%;
 	float: left;
     padding-left: 50px;
     padding-right: 50px;
+    border: 2px solid #AE8A31;
 }
 
 
@@ -523,9 +518,10 @@ input[type=text] {
     width: 100%;
     height: 430px;
     background: black;
+    border: 2px solid 
     padding-top: 0px;
     padding-bottom: 20px;
-    border: 2px solid #000;
+    border: 2px solid #AE8A31;
 }
 
 
@@ -670,7 +666,7 @@ input[type=text] {
     padding-top: 8px;
     background: black;
     height: 308px;
-    border: 2px solid #000;
+    border: 2px solid #AE8A31;
 }
 
 
@@ -696,20 +692,9 @@ input[type=text] {
 
 
 
-#footer {
-    width: 100%;
-    height: 20px;
-    background: black;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-
-/*------------------------------------------------*/
-
-
 /*| PAGE 2 |*/
+
+
 
 
 /*------------------------------------------------*/
@@ -725,34 +710,28 @@ input[type=text] {
     margin-right: auto;
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 10px;
+    padding-top: 13px;
 }
 
+
+/*------------------------------------------------*/
+
+
+/* user section */
 .left_column2{
-    background: white;
+    background: black;
     width: 35%;
     height: 100%;
 	float: left;
     padding-left: 50px;
     padding-right: 50px;
     overflow: scroll;
-    border-right: 3px solid #000;
+    border-top: 2px solid #AE8A31;
+    border-right: 1px solid #AE8A31;
 }
-
-
-.right_column2{
-    background: white;
-    width: 65%;
-    height: 100%;
-	float: left;
-    padding-left: 0px;
-    padding-right: 0px;
-    overflow: scroll;
-}
-
 
 .aboutCont{
-    background: white;
+    background: transparent;
     width: 100%;
     height: 500px;
 	float: center;
@@ -761,6 +740,23 @@ input[type=text] {
 }
 
 
+/*------------------------------------------------*/
+
+
+/* post section */
+.right_column2{
+    background: #000;
+/*    background-size: 100% 20px;*/
+    width: 65%;
+    height: 100%;
+	float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: scroll;
+    border-top: 2px solid #AE8A31;
+}
+
+/* imgs layout */
 .row2 {
     display: -ms-flexbox; /* IE10 */
     display: flex;
@@ -791,9 +787,9 @@ input[type=text] {
     }
 }
 
-
+/* imgs zoom */
 #zoom img:hover{
-	transform:scale(0.9);
+	transform:scale(1.1);
     opacity: 0.7;
 }
 
@@ -803,3 +799,220 @@ input[type=text] {
 }
 
 
+
+/*------------------------------------------------*/
+
+
+
+
+/*| PAGE 3 |*/
+
+
+
+
+/*------------------------------------------------*/
+
+
+
+/*| CONTAINER4 |*/
+
+.container4 {
+    width: 100%;
+    height: 790px;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -4px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 8px;
+    border-top: 1px solid #AE8A31;
+    overflow: hidden;
+}
+
+
+.wardrobeContainer {
+    width: 100%;
+    height: 840px;
+    background: black;
+    margin-top: -80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+
+
+
+/*------------------------------------------------*/
+
+
+
+
+/* search bar */
+.search-container{
+    width: 80%;
+    display: block;
+    margin:30px auto;
+}
+
+input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 15px;
+    border: 2px solid #AE8A31;
+    border-radius: 50px;
+    outline: none;
+    &:focus{
+    border: 1px solid #008ABF;
+   }
+ }
+
+.search-icon{
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -13px;
+}
+
+
+
+/*------------------------------------------------*/
+
+
+
+.left_column3{
+    background:transparent;
+    width: 35%;
+    height: 75%;
+	float: left;
+    padding-left: 70px;
+    padding-right: 30px;
+    overflow: hidden;  
+}
+
+
+
+/*------------------------------------------------*/
+
+
+
+.right_column3{
+    background: transparent;
+    width: 65%;
+    height: 69.3%;
+	float: right;
+    padding-left: 0px;
+    padding-right: 50px;
+    overflow: hidden;
+    
+}
+
+.left_content{
+    background: transparent;
+    width: 45%;
+    height: 94%;
+	float: left;
+    padding-top: 18px;
+    padding-right: 10px;
+}
+
+.right_content{
+    background: transparent;
+    width: 55%;
+    height: 94%;
+	float: right;
+    padding-left: 10px;
+    padding-top: 18px;
+}
+
+.like_btn2{
+    height:100px;
+    top: 52.9%;
+    left: 35%;
+    position: absolute;
+}
+
+
+
+
+
+/*------------------------------------------------*/
+
+
+
+/*| THE WEBDROBE |*/
+
+.left_column4{
+    background:black;
+    width: 50%;
+    height: 100%;
+	float: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 32px;
+    overflow: hidden;  
+}
+
+
+.left_column4 img {
+    vertical-align: middle;
+}
+
+.right_column4{
+    background: black;
+    width: 50%;
+    height: 100%;
+	float: left;
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-top: 32px;
+    overflow: hidden;  
+}
+
+
+
+/* Hide the images by default */
+.mySlides1 {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    font-family: courier new;
+    background-color: rgb(167, 31, 35);
+    padding: 2px 16px;
+    color: white;
+}
+
+.rowT:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.columnT {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

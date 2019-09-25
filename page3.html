@@ -18,16 +18,194 @@
             <a href="index.html">Home</a>
             <a href="page2.html">Profile</a>
             <a href="page3.html">Webdrobe</a>
-            <a href="page4.html">Styleboard</a>
             <i class="fa fa-search"></i>
         </ul>
 	</nav>
-    <br><br>
+    <br><br><br>
     
-    <!-- Image Slideshow -->
+    <!--Container 4 Begins-->
     <div class="container4">
+        <!--Search Bar-->
+        <form class="search-container">
+            <input type="text" id="search-bar" placeholder="Search My Webdrobe...">
+            <!--Search Icon-->
+            <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+        </form>
+        <!--Left side content-->
+        <div class="left_column3">
+            <!--Title-->
+            <h1 style="font-size:44px; color: rgb(167, 31, 35); text-shadow: -20.5px -13.5px 8px #AE8A31;">My Webdrobe</h1>
+            <br>
+            <!--Zoom Img-->
+            <div id="zoom">
+                <img src="img/p3_skirt.jpg" style="width:100%;" alt="Photo by Lisa Fotios from Pexels " >
+            </div>
+            <p style="font-size:18px; color:#fff; font-family: courier new; text-align: center; padding-top:-20px;"><strong>Status:</strong>Laundry</p>
+        </div>
         
+        <!--Right side content-->
+        <div class="right_column3">
+            <!--Split into 2-->
+            <div class="left_content">
+                <!--Header-->
+                <h1 style="font-size:25px; color: rgb(167, 31, 35); text-align:left;">Vintage Denim Skirt</h1>
+                
+                <!--Clothing Description-->
+                <p style="font-size:15px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px;">Striped button up skirt, <br> Light Denim, <br>Bought from Princess Polly,<br> Size 8, <br>2017</p>
+                
+                <br><br>
+                
+                <!--Buttons + Icons-->
+                <p style="font-size:15px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px;">.___.Add to Favourites!</p><br>
+                <p style="font-size:15px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px;">.___.Last worn on Aug 20,2019</p>
+                <!--Like Button + Calendar-->
+                <div class="like_btn2">
+                    <i onclick="likeFunction(this)" class="fa fa-heart" style="font-size: 22px;  padding:10px 12.5px 8px;"></i>
+                    <br>
+                    <i class="fa fa-calendar" style="font-size: 22px;  padding:10px 13.8px 10px 13.8px; color: #000;"></i>
+                </div>
+                <!--Java code for like button-->
+                <script>
+                    function likeFunction(x) {
+                        x.classList.toggle("gold-heart");
+                    }
+                </script>
+            </div>
+            
+            <div class="right_content">
+                <h2 style="font-size:20px; color: rgb(167, 31, 35); text-align:left; padding-left:15px">Pair this with...</h2>
+                <br>
+                <!-- 3 Top Suggestions --> 
+                <div class="row">
+                    <div class="imgGrid">
+                        <img src="img/top1.jpg" style="width:100%; height:150px" alt="Photo by Marco Lima from Pexels">
+                        <p style="font-size:12px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px;">Polka Dot, <br> Wrap Crop Top, <br>Bought from Glassons,<br> Size 8, <br>2019</p>
+                    </div>
+                    
+                    <div class="imgGrid">
+                        <img src="img/top2.jpg" style="width:100%; height:150px" alt="Photo by Jorge Fakhouri Filho from Pexels">
+                        <p style="font-size:12px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px; ">Black Silk, <br> Cropped Top, <br>Bought from Princess Polly,<br> Size 8, <br>2019</p>
+                    </div>
+                    
+                    <div class="imgGrid">
+                        <img id="myImg" src="img/top3.jpg" style="width:100%; height:150px" alt="Photo by Jorge Fakhouri Filho from Pexels">
+                        <p style="font-size:12px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px; ">Tied Up, <br> Printed Tee, <br>Bought from Cotton On,<br> Size 8, <br>2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr color="#AE8A31" size="1" width="90%">
     </div>
     
+    
+    <div class="wardrobeContainer">
+        <!-- Container for the image gallery -->
+        <div class="left_column4">
+            <!-- Category -->
+            <h1 style="font-size:65px; color: #AE8A31; text-align:center; text-shadow:-20.5px -13.5px 8px rgb(167, 31, 35);">TOPS</h1>
+            <!-- Imgs -->
+            <div class="mySlides1">
+                <img src="img/top1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="img/top2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="img/top3.jpg" style="width:100%">
+            </div>
+    
+            <div class="mySlides1">
+                <img src="img/top4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="img/top5.jpg" style="width:100%">
+            </div>
+    
+            <div class="mySlides1">
+                <img src="img/top6.jpg" style="width:100%">
+            </div>
+    
+            <!-- Caption -->
+            <div class="caption-container">
+                <p id="caption1"></p>
+            </div>
+            
+            <!-- Preview Imgs -->
+            <div class="rowT">
+                <div class="columnT">
+                    <img class="demo cursor" src="img/top1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Orange Polka Dot Crop Top">
+                </div>
+                
+                <div class="columnT">
+                    <img class="demo cursor" src="img/top2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Silk Plain Black Singlet">
+                </div>
+                
+                <div class="columnT">
+                    <img class="demo cursor" src="img/top3.jpg"   style="width:100%" onclick="currentSlide(3)" alt="Graphic Tee">
+                </div>
+                
+                <div class="columnT">
+                    <img class="demo cursor" src="img/top4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Patterned Shirt">
+                </div>
+                
+                <div class="columnT">
+                    <img class="demo cursor" src="img/top5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Plain White Singlet">
+                </div>    
+                
+                <div class="columnT">
+                    <img class="demo cursor" src="img/top6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Baby Blue Top Set">
+                </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript code for Slideshow -->
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides1");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption1");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+        
+        <div class="right_column4">
+            <br><br><br><br>
+            <h1 style="font-size:35px; color: rgb(167, 31, 35); text-align:left;">My Closet...</h1>
+            <br>
+            <!--Clothing Description-->
+            <p style="font-size:15px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px;">Welcome to your online closet!<br><br> This page is where you can view all the pieces of <br>clothing that you own and have uploaded online. <br><br> Here, you can find out its status, to see whether the clothing you want to wear is in the laundry or not, or even just to check when you've last worn it to ensure you're actually using clothes that you buy! <br><br> Not only can you plan when to wear certain pieces, but you can also add any items to your favourite's folder so that it will always get recommended to other pieces that we think could go super well with it! <br><br> Make sure you check out our recommended pieces as they are based on your liked posts and saved items.</p>
+            <br><br><br><br><br><br><br><br>
+            <p style="font-size:15px; color:#fff; font-family: courier new; text-align: left; padding-top:-20px;">We hope you find our website extremely helpful to your fashion needs and we would be happy to hear from you if you ever wish to give us some feedback!</p>
+            
+            
+            
+        </div>
+    </div>
 </body>
 </html>
